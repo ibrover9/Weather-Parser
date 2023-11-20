@@ -17,6 +17,15 @@ export const UI_ELEMENTS = {
     DIV:{
         TEMPERATURE: document.querySelector('.temperature'),
         NAME_CITY:  document.querySelector('.name-city'),
-        ICON_WEATHER: document.querySelector('.icon-weather')
+        ICON_WEATHER: document.querySelector('.icon-weather'),
+        ADD_CITY: 1,
+        LOCATION: document.querySelector('.locations'),
+        //спросить
+        // ALL_LOCATIONS_FAVORITE: document.querySelectorAll('.nameLocation'),
+       
     }
 }
+
+// export const ERROR = {
+//     GET_NAME_CITY:  error.message.includes("Cannot read properties of undefined (reading 'temp')"),
+// }

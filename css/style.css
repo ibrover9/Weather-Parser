@@ -112,11 +112,29 @@ button:focus {
     overflow: scroll;
     max-height: 200px;
 }
+
+.name-city_shape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .name-city{
     font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
     padding: 5px;
+}
+
+.add-city-shape{
+    padding: 2px 10px;
+    border-radius: 5px;
+    transform: translateY(2%);
+}
+
+.add-city-shape:hover{
+    background-color: var(--accent-color);
 }
 
 .name-city:first-letter {
@@ -160,14 +178,30 @@ button:focus {
 
 .locations{
    
-    padding-top: 40px;
-    margin-bottom: 40px;
+    padding: 45px 0;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    min-height: 193px;
+    max-height: 193px;
 }
 
 .location{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameLocation{
     text-align: center;
     padding-left: 5px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
     font-family: Roboto;
+}
+
+.nameLocation:first-letter {
+    text-transform: uppercase;
+}
+
+.location:hover{
+    background-color: var(--accent-color);
 }
