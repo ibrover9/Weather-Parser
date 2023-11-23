@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+    font-family: Roboto;
+    /* display: none; */
+}
+
 input{
     padding: 0;
     margin: 0;
@@ -27,15 +33,24 @@ button:focus {
     --background-color: #e5e5e5;
 }
 
+
+.hide{
+    display: none;
+}
+
+
 .Search-cities{
     margin: 0 auto;
     max-width: 500px;
+    max-height: 20px;
+    min-height: 20px;
 }
 
 .box-icon-Search-cities{
     display: flex;
     justify-content: center;
     background-color:var(--accent-color);
+    min-height: 20px;
     
 }
 
@@ -50,8 +65,6 @@ button:focus {
     border: 1px solid black;
 }
 .loupe{
-    
-    
      max-width: 10px ;
      max-height: 10px;
 }
@@ -71,19 +84,30 @@ button:focus {
 }
 
 .temperature{
+    padding-left: 15px;
+    min-height: 84px;
     font-family: Roboto;
     font-size: 70px;
+}
+
+.icons-weather{
+ display: flex;
+ justify-content: center;
 }
 
 .icon-weather{
     display: flex;
     justify-content: center;
+    min-height: 100px;
     margin: 20px;
     margin-bottom: 50px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
 }
 
 .weather-characteristics{
-    padding: 15px 0;
+    padding: 31px 0;
+    margin: 23px 0;
 }
 
 .weather-characteristic{
@@ -110,7 +134,8 @@ button:focus {
     /* min-height: 200px; */
     scroll-snap-type: y mandatory;
     overflow: scroll;
-    max-height: 200px;
+    max-height: 254px;
+    min-height: 254px;
 }
 
 .name-city_shape{
@@ -146,9 +171,12 @@ button:focus {
 }
 
 .icon-menu-weather-parser{
+
     margin: 0 auto;
     font-family: Roboto;
-    padding: 15px;
+    text-decoration: none;
+    color: black;
+    padding: 18.5px;
     
     
 }
