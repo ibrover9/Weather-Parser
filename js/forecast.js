@@ -13,11 +13,7 @@ export const forecast = function(event){
     const serverUrlForecast = URL.SERVER_URL_FORECAST;
     let cityName = UI_ELEMENTS.INPUT.FIND_CITY.value;
     if(cityName==''){
-        // cityName = UI_ELEMENTS.DIV.NAME_CITY.textContent;
         cityName=localStorage.getItem('NameCity');
-        // if(cityName==''){
-        //     cityName=localStorage.getItem('NameCity');
-        // }
     }
     else {
         cityName=localStorage.getItem('NameCity');

@@ -3,7 +3,6 @@ export const MOUNTH = ["", "января", "февраля", "марта", "ап
 export const URL = {
      SERVER_URL: 'http://api.openweathermap.org/data/2.5/weather',
      SERVER_URL_FORECAST: 'http://api.openweathermap.org/data/2.5/forecast',
-    //  ICON:'http://api.openweathermap.org/img/wn/02d@2x.png'
     }
 
 export const KEY = {
@@ -34,6 +33,7 @@ export const UI_ELEMENTS = {
         LOCATION: document.querySelector('.locations'),
         ITEM_FORECAST: document.querySelector(' .weather-characteristics-rain-snow' ),
 
+        // TODO: i will  use latter
         //спросить
         // ALL_LOCATIONS_FAVORITE: document.querySelectorAll('.nameLocation'),
        
@@ -41,7 +41,3 @@ export const UI_ELEMENTS = {
 }
 
 
-
-// export const ERROR = {
-//     GET_NAME_CITY:  error.message.includes("Cannot read properties of undefined (reading 'temp')"),
-// }
