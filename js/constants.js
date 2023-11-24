@@ -14,6 +14,8 @@ export const UI_ELEMENTS = {
     BUTTON: {
         FIND_CITY: document.querySelector('.box-icon-Search-cities'),
         SHAPE: document.querySelector('.add-city-shape'),
+        MENU_WEATHER: document.querySelector('.menu-weather-parser'),
+        
     },
     INPUT:{
         FIND_CITY:  document.querySelector('.input-Search-cities'),

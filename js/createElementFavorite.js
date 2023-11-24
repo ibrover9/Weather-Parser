@@ -10,12 +10,9 @@ export function createElementFavorite(){
         ItemDiv.classList = ` location`;
         const textItem = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
         const arrayNameLocation = document.querySelectorAll('.nameLocation');
-        console.log(arrayNameLocation)
         let keyStop = false;
         arrayNameLocation.forEach(element => {
             if(element.innerHTML == textItem){
-                console.log(element);
-                console.log(textItem);
                 keyStop=true;
             }
             
@@ -43,7 +40,6 @@ export function createElementFavorite(){
 
 export function createLocation(ItemDiv, textItem){
     UI_ELEMENTS.DIV.LOCATION.append(ItemDiv);
-    console.log(localStorage.getItem('favoriteCities'));
     const oldLine = localStorage.getItem('favoriteCities');
     let stringFavoriteCity=`${oldLine},${textItem}`;
     localStorage.setItem('favoriteCities',stringFavoriteCity)
@@ -59,12 +55,9 @@ export function createElementFavoriteAutomatically(){
         
         const textItem = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
         const arrayNameLocation = document.querySelectorAll('.nameLocation');
-        console.log(arrayNameLocation);
         let keyStop = false;
         arrayNameLocation.forEach(element => {
             if(element.innerHTML == textItem){
-                console.log(element);
-                console.log(textItem);
                 keyStop=true;
             }
             

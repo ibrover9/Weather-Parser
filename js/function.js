@@ -25,7 +25,7 @@ export const getWeather_Now_import = function(event) {
  }
 
 
- export function favoriteCityAutomat1(NameCity){
+ export function favoriteCityAutomat(NameCity){
    try{
       const ItemDiv = document.createElement('div');
       ItemDiv.classList = `location`;
@@ -34,8 +34,6 @@ export const getWeather_Now_import = function(event) {
       let keyStop = false;
       arrayNameLocation.forEach(element => {
           if(element.innerHTML == textItem){
-              console.log(element);
-              console.log(textItem);
               keyStop=true;
           }
       });

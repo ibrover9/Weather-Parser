@@ -7,13 +7,23 @@ import { createItemsForecast } from "./createItemsForecast.js";
 
 
 export const forecast = function(event){
+    if(event){
     event.preventDefault();
+    }
     const serverUrlForecast = URL.SERVER_URL_FORECAST;
-    const cityName = UI_ELEMENTS.INPUT.FIND_CITY.value;
-    console.log(cityName);
+    let cityName = UI_ELEMENTS.INPUT.FIND_CITY.value;
+    if(cityName==''){
+        // cityName = UI_ELEMENTS.DIV.NAME_CITY.textContent;
+        cityName=localStorage.getItem('NameCity');
+        // if(cityName==''){
+        //     cityName=localStorage.getItem('NameCity');
+        // }
+    }
+    else {
+        cityName=localStorage.getItem('NameCity');
+    }
     createItemsForecast(serverUrlForecast, cityName);
     if(document.querySelector('.weather-characteristic-rain-snow')){
-
         const arrayForecast=document.querySelectorAll('.weather-characteristic-rain-snow');
         arrayForecast.forEach(element => {
             element.remove();

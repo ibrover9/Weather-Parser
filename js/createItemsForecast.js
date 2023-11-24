@@ -10,8 +10,8 @@ export function createItemsForecast(serverUrlForecast, cityName){
          ).then(data => {
             const arrayItemsForecast = data["list"];
             arrayItemsForecast.forEach(element => {
-                const temperatyre = Math.round( element['main']['temp'] - 273.15 )+' &deg'
-                const feelsLike = element['main']['feels_like'];
+                const temperatyre = Math.round( element['main']['temp'] - 273.15 ) + ' &deg';
+                const feelsLike = Math.round(element['main']['feels_like'] - 273.15) + ' &deg';
                 const date = new Date (element['dt'] * 1000);
                 const dateDate = date.getDate();
                 const weather = element["weather"][0]["main"];

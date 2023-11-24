@@ -15,13 +15,10 @@ const DeleteElementList=function(event){
       event.target.closest('.location').remove();
       let stringFavoriteCity=localStorage.getItem('favoriteCities');
       let arrayFavoriteCity=stringFavoriteCity.split(',');
-      console.log(arrayFavoriteCity);
       let newStringFavoriteCity='';
       arrayFavoriteCity.forEach(element => {
-        console.log(element);
-        console.log(event.target.closest('.location').querySelector('.nameLocation').textContent);
         const deleteCity = event.target.closest('.location').querySelector('.nameLocation');
-        if(element==event.target.closest('.location').querySelector('.nameLocation').textContent){
+        if(element==deleteCity.textContent){
 
         }
         else{
@@ -33,7 +30,6 @@ const DeleteElementList=function(event){
           }
         }
       });
-      console.log(newStringFavoriteCity);
       localStorage.setItem('favoriteCities', newStringFavoriteCity);
     }catch(error)
     {
