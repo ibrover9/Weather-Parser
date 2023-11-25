@@ -1,6 +1,7 @@
 import { URL, KEY, UI_ELEMENTS } from "./constants.js";
 
 
+
 export async function optionWeatherNow(cityName){
     try{
         const serverUrl = URL.SERVER_URL;

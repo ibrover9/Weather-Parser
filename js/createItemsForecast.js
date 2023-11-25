@@ -1,6 +1,7 @@
 import { URL, KEY, UI_ELEMENTS, MOUNTH } from "./constants.js";
 import { patternItemForecast } from "./patternItemForecast.js";
 
+
 export async function createItemsForecast(serverUrlForecast, cityName){
     const url =`${serverUrlForecast}?q=${cityName}&appid=${KEY. API_KEY}`;
     const processingUrl = await fetch(url);

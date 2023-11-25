@@ -3,28 +3,32 @@ import { favoriteCity } from "./function.js";
 import { forecast } from "./forecast.js";
 
 
+export function InitializationElementFavorite(nameCity){
+    this.nameCity = nameCity;
+    this.ItemDiv = document.createElement('div');
+    this.arrayNameLocation = document.querySelectorAll('.nameLocation');
+    this.keyStop = false;
+}
 
 export function createElementFavorite(){
     try{
-        const ItemDiv = document.createElement('div');
-        ItemDiv.classList = ` location`;
-        const textItem = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
-        const arrayNameLocation = document.querySelectorAll('.nameLocation');
-        let keyStop = false;
-        arrayNameLocation.forEach(element => {
-            if(element.innerHTML == textItem){
-                keyStop=true;
+        const textNameCity = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
+        const favoriteCity = new InitializationElementFavorite(textNameCity);
+        favoriteCity.ItemDiv.classList = ` location`;
+        favoriteCity.arrayNameLocation.forEach(element => {
+            if(element.innerHTML == favoriteCity.nameCity){
+                favoriteCity.keyStop=true;
             }
             
         });
 
-        if(!keyStop){
-            createLocation(ItemDiv, textItem);
+        if(!favoriteCity.keyStop){
+            createLocation( favoriteCity.ItemDiv, favoriteCity.nameCity);
         }
         else{
             alert("Данный город уже присутствует в списке ЛЮБИМЫХ ЛОКАЦИЙ");
         }
-        keyStop = false;
+        favoriteCity.keyStop = false;
     }
     catch(error){
         const SyntaxError = error.name == "SyntaxError";
@@ -50,26 +54,23 @@ export function createLocation(ItemDiv, textItem){
 
 export function createElementFavoriteAutomatically(){
     try{
-        const ItemDiv = document.createElement('div');
-        ItemDiv.classList = ` location`;
-        
-        const textItem = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
-        const arrayNameLocation = document.querySelectorAll('.nameLocation');
-        let keyStop = false;
-        arrayNameLocation.forEach(element => {
-            if(element.innerHTML == textItem){
-                keyStop=true;
+        const textNameCity = UI_ELEMENTS.DIV.NAME_CITY.innerHTML;
+        const favoriteCity = new InitializationElementFavorite(textNameCity);
+        favoriteCity.ItemDiv.classList = ` location`;
+        favoriteCity.arrayNameLocation.forEach(element => {
+            if(element.innerHTML == favoriteCity.nameCity){
+                favoriteCity.keyStop=true;
             }
             
         });
 
-        if(!keyStop){
-            createLocation(ItemDiv, textItem);
+        if(!favoriteCity.keyStop){
+            createLocation(favoriteCity.ItemDiv, favoriteCity.nameCity);
         }
         else{
             alert("Данный город уже присутствует в списке ЛЮБИМЫХ ЛОКАЦИЙ");
         }
-        keyStop = false;
+        favoriteCity.keyStop = false;
     }
     catch(error){
         const SyntaxError = error.name == "SyntaxError";
